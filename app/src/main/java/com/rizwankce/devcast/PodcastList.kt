@@ -1,6 +1,7 @@
 package com.rizwankce.devcast
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 //{
 //    "type_of": "podcast_episodes",
@@ -28,7 +29,7 @@ data class PodcastList(
     val imageUrl: String,
     @SerializedName(value = "podcast")
     val podcast: PodCast
-) {
+): Serializable {
 }
 
 data class PodCast(
@@ -38,6 +39,6 @@ data class PodCast(
     val slug: String,
     @SerializedName(value = "image_url")
     val imageUrl: String
-) {
+): Serializable {
 
 }

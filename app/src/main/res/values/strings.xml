@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DevCast</string>
+    <string name="episode_title">Episode Title</string>
+    <string name="podcast_title">Podcast TItle</string>
 </resources>
