@@ -1,10 +1,13 @@
 package com.rizwankce.devcast
 
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.annotation.RequiresApi
 
 class EpisodeDetailsActivity : AppCompatActivity() {
 
@@ -16,7 +19,7 @@ class EpisodeDetailsActivity : AppCompatActivity() {
 
         val episode = intent.getSerializableExtra(PodcastCard.episodeKey) as? PodcastList
         episode?.let {
-            supportActionBar?.title = it.title
+            supportActionBar?.title = "DevCast - " + it.podcast.title
             loadWebView("https://dev.to/"+it.path)
         }
     }
